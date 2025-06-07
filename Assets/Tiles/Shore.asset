@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: Water
+  m_Name: Shore
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 21300000, guid: 6fce5a0dfaf4449429e73bdd45a41920, type: 3}
-  - {fileID: 21300000, guid: dd564ae3b33bb46c9b5194948f9fb824, type: 3}
-  - {fileID: 21300000, guid: 0a6b211fa7f564124a73161b77f6ea89, type: 3}
-  - {fileID: 21300000, guid: 6260eda3c748541d098d04d939426866, type: 3}
+  - {fileID: 21300000, guid: cf2f1e4b1ea0b4468a465e02e657ebff, type: 3}
+  - {fileID: 21300000, guid: 21e1004862d0248d09d75a769d66f9b5, type: 3}
+  - {fileID: 21300000, guid: 2d6ffd36bbd3242b49a183cea67bd712, type: 3}
+  - {fileID: 21300000, guid: 456b74042e7054ff8b720e5d806d8aa3, type: 3}
   m_MinSpeed: 2
   m_MaxSpeed: 2
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
-  m_TileColliderType: 1
+  m_TileColliderType: 0
   m_TileAnimationFlags: 0

@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: cf2f1e4b1ea0b4468a465e02e657ebff
-AssetOrigin:
-  serializedVersion: 1
-  productId: 173199
-  packageName: Top Down Adventure Assets
-  packageVersion: 1.0
-  assetPath: Assets/Top Down Adventure Assets/Visuals/ENVIRONMENT/sea/shore1.png
-  uploadId: 374738
+guid: a26be6ba73c881d4582e91e42fac1b39
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
