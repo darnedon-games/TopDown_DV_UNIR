@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     private Animator anim;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float interactionRadius;
-    [SerializeField] private LayerMask whatIsCollidable;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -61,9 +60,15 @@ public class Player : MonoBehaviour
         {
             inputH = Input.GetAxisRaw("Horizontal");
         }
+
         if (inputH == 0)
         {
             inputV = Input.GetAxisRaw("Vertical");
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ThrowInteraction();
         }
     }
 
@@ -82,7 +87,19 @@ public class Player : MonoBehaviour
 
     private Collider2D ThrowCheck()
     {
-        return Physics2D.OverlapCircle(interactionPoint, interactionRadius, whatIsCollidable);
+        return Physics2D.OverlapCircle(interactionPoint, interactionRadius);
+    }
+
+    private void ThrowInteraction()
+    {
+        frontCollider = ThrowCheck();
+        if (frontCollider != null)
+        {
+            if (frontCollider.gameObject.CompareTag("NPC")){
+                NPC npcScript = frontCollider.gameObject.GetComponent<NPC>();
+                npcScript.Interact();
+            }
+        }
     }
 
     private void OnDrawGizmos()
