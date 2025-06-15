@@ -18,10 +18,17 @@ public class Player : MonoBehaviour
 
     public bool Interacting { get => interacting; set => interacting = value; }
 
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        anim = GetComponent<Animator>();
+        transform.position = GameManager.Instance.lastSavedPosition;
+        anim.SetFloat("inputH", GameManager.Instance.lastSavedRotation.x);
+        anim.SetFloat("inputV", GameManager.Instance.lastSavedRotation.y);
     }
 
     // Update is called once per frame
