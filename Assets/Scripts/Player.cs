@@ -14,6 +14,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float interactionRadius;
 
+    private bool interacting;
+
+    public bool Interacting { get => interacting; set => interacting = value; }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +35,7 @@ public class Player : MonoBehaviour
     private void MovementAndAnimations()
     {
         // Ejecuto movimiento solo si estoy en una casilla y solo si hay input
-        if (!moving && (inputH != 0 || inputV != 0))
+        if (!interacting && !moving && (inputH != 0 || inputV != 0))
         {
             anim.SetBool("walking", true);
             anim.SetFloat("inputH", inputH);

@@ -10,6 +10,8 @@ public class NPC : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     private bool speaking = false;
     private int currentIndex = -1;
+
+    [SerializeField] private GameManagerSO gameManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +21,8 @@ public class NPC : MonoBehaviour
 
     public void Interact()
     {
+        gameManager.ChangePlayerState(false);
+
         dialogueFrame.SetActive(true);
         if (!speaking)
         {
@@ -72,5 +76,7 @@ public class NPC : MonoBehaviour
         dialogueText.text = "";
         currentIndex = -1;
         dialogueFrame.SetActive(false);
+
+        gameManager.ChangePlayerState(true);
     }
 }

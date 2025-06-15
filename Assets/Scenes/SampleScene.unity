@@ -811,6 +811,7 @@ MonoBehaviour:
   timeBetweenLetters: 0.03
   dialogueFrame: {fileID: 29402409}
   dialogueText: {fileID: 1650750409}
+  gameManager: {fileID: 11400000, guid: 00b14d2e1fc9b7e46bf482fc08dc6a71, type: 2}
 --- !u!1 &982259814
 GameObject:
   m_ObjectHideFlags: 0
