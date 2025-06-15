@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour, Interactable
 {
     [SerializeField, TextArea(1,5)] private string[] phrases;
     [SerializeField] private float timeBetweenLetters;

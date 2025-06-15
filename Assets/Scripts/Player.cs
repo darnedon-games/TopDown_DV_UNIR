@@ -99,10 +99,10 @@ public class Player : MonoBehaviour
         frontCollider = ThrowCheck();
         if (frontCollider != null)
         {
-            if (frontCollider.gameObject.CompareTag("NPC")){
-                NPC npcScript = frontCollider.gameObject.GetComponent<NPC>();
-                npcScript.Interact();
-            }
+            if (frontCollider.TryGetComponent(out Interactable interactable))
+            {
+                interactable.Interact();
+            }  
         }
     }
 
